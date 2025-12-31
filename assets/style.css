@@ -6,32 +6,44 @@
 }
 
 * {
-  background-color: var(--color-dark);
-  color: var(--color-white);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   padding: 0;
   margin: 0;
 }
 
 body {
+  background-color: var(--color-dark);
+  color: var(--color-white);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   flex-direction: column;
   gap: 16px;
+  transition: 0.5s;
+}
+
+body.light {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+}
+
+#theme {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 img {
   height: 45px;
-  width: auto;
-  position: absolute;
-  top: 60px;
-  left: 50%;
 }
 .clock {
   display: flex;
   gap: 50px;
+  flex-wrap: wrap;
 }
 .clock span {
   display: flex;
